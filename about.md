@@ -1,11 +1,12 @@
 ---
 layout: page
-title: About
+title: About Onesimus Systems
 permalink: /about/
+menutitle: About
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Onesimus Systems began in Fall 2013 with Dandelion ([source](https://github.com/dragonrider23/dandelion)). Since then many more projects have been created all with the intent of either solving a problem, or learning new techniques.
+In the main GitHub repo [github.com/dragonrider23](https://github.com/dragonrider23) you will find several projects, some complete some not so much. But nonetheless, each has a purpose.
+Most applications are written in PHP or Go, more of the latter these days. All are released as open-source software. Use them, learn from them, help me improve them.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+You can find the source code for this site at: [github.com/dragonrider23/dragonrider23.github.io](https://github.com/dragonrider23/dragonrider23.github.io)
