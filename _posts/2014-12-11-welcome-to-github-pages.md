@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Github Pages!"
+author: "Lee Keitel"
 date:   2014-12-11 23:08:00
 categories: update
 ---
