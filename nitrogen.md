@@ -20,30 +20,30 @@ Here is where the basics of Nitrogen will be posted.
 Language Core
 -------------
 
-The following words are reserved keywords for builtin functions or operators, or are used in the core library. This means they cannot be redefined using the (def) or (pdef) functions.
+The following words are reserved keywords for builtin functions or operators, or are used in the core library. This means they cannot be redefined using the (def) functions.
 
 Internal - Functions and Operators
 
 <table>
   <tr>
+    <td>\</td>
+    <td>=</td>
+    <td>const</td>
+    <td>def</td>
+    <td>error</td>
+    <td>eval</td>
+  </tr>
+  <tr>
+    <td>exit</td>
+    <td>head</td>
+    <td>join</td>
+    <td>list</td>
     <td>load</td>
     <td>print</td>
-    <td>error</td>
-    <td>exit</td>
-    <td>=</td>
-    <td>def</td>
   </tr>
   <tr>
-    <td>pdef</td>
-    <td>undef</td>
-    <td>\</td>
-    <td>list</td>
-    <td>head</td>
     <td>tail</td>
-  </tr>
-  <tr>
-    <td>eval</td>
-    <td>join</td>
+    <td>undef</td>
   </tr>
 </table>
 
@@ -55,10 +55,11 @@ Internal - Arithmatic and Comparison Operators
     <td>-</td>
     <td>*</td>
     <td>/</td>
+    <td>%</td>
     <td>if</td>
-    <td>==</td>
   </tr>
   <tr>
+    <td>==</td>
     <td>!=</td>
     <td>&gt;</td>
     <td>&lt;</td>
@@ -96,47 +97,47 @@ Core Library - Language Constructs
 Core Library
 ------------
 
-Core Library - Functions
+Core Library - Functions (Note: These can be undefined. They will eventually be implemented in the interpreter directly but for now are written in Nitrogen.)
 
 <table>
   <tr>
-    <td>unpack</td>
-    <td>pack</td>
     <td>curry</td>
-    <td>uncurry</td>
-    <td>fst</td>
+    <td>drop</td>
+    <td>drop-while</td>
+    <td>elem</td>
+    <td>filter</td>
   </tr>
   <tr>
-    <td>snd</td>
-    <td>trd</td>
-    <td>len</td>
-    <td>nth</td>
+    <td>foldl</td>
+    <td>foldr</td>
+    <td>fst</td>
+    <td>init</td>
     <td>last</td>
   </tr>
   <tr>
-    <td>map</td>
-    <td>filter</td>
-    <td>init</td>
-    <td>reverse</td>
-    <td>foldl</td>
-  </tr>
-  <tr>
-    <td>foldr</td>
-    <td>sum</td>
-    <td>product</td>
-    <td>take</td>
-    <td>drop</td>
-  </tr>
-  <tr>
-    <td>split</td>
-    <td>take-while</td>
-    <td>drop-while</td>
-    <td>elem</td>
+    <td>len</td>
     <td>lookup</td>
+    <td>map</td>
+    <td>nth</td>
+    <td>pack</td>
   </tr>
   <tr>
-    <td>zip</td>
+    <td>product</td>
+    <td>reverse</td>
+    <td>snd</td>
+    <td>split</td>
+    <td>sum</td>
+  </tr>
+  <tr>
+    <td>take</td>
+    <td>take-while</td>
+    <td>trd</td>
+    <td>uncurry</td>
+    <td>unpack</td>
+  </tr>
+  <tr>
     <td>unzip</td>
+    <td>zip</td>
   </tr>
 </table>
 
