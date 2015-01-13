@@ -25,7 +25,7 @@ Installing From Precompiled Binaries (recommended):
 
 {% highlight bash %}
 wget http://onesimussystems.com/content/ica/infra-config-archive-v1.2.0.tar.gz
-tar -xvfz infra-config-archive-v1.2.0.tar.gz
+tar -xvzf infra-config-archive-v1.2.0.tar.gz
 sudo ./scripts/setup.sh
 cp sample-configuration.toml configuration.toml
 vim configuration.toml
