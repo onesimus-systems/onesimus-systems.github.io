@@ -40,6 +40,27 @@ Fields:
 - **BindAddress** - The network address the HTTP server should bind to. If left blank, it will be accessable on all IP addresses assigned to the server.
 - **BindPort** - The port that the HTTP server will be available. If you set this to the common HTTP port 80, you will need to run ICA as root or give the running user permission to bind to common ports.
 
+Device Definitions File
+-----------------------
+
+Located in `device-definitions.conf`. Example:
+
+<pre>
+# This is a comment
+Foo::192.168.0.1::cisco::telnet
+Bar::192.168.0.2::cisco::ssh
+FooBar::192.168.0.3::juniper::ssh
+</pre>
+
+The device definitions file (DTF) is used to define the devices that will be managed with ICA. The fields are separated by a double colon `::` and consist of `device name::hostname::device type::method`. Comments may be added by starting a line with a "#". Comments MUST be on a new line.
+
+Fields:
+
+- **device name** - Name of the device
+- **hostname** - Hostname or IP address of device
+- **device type** - Device type
+- **method** - Device type method used
+
 Device Type Definitions File
 ----------------------------
 
@@ -68,24 +89,3 @@ Available Arguments:
 - **$password** - The password as defined in the application configuration.
 - **$logfile** - The file that the script to write to. The script is responsible for outputting stdout to a file.
 - **$enablepw** - The enable password for Cisco devices as defined in the application configuration
-
-Device Definitions File
------------------------
-
-Located in `device-definitions.conf`. Example:
-
-<pre>
-# This is a comment
-Foo::192.168.0.1::cisco::telnet
-Bar::192.168.0.2::cisco::ssh
-FooBar::192.168.0.3::juniper::ssh
-</pre>
-
-The device definitions file (DTF) is used to define the devices that will be managed with ICA. The fields are separated by a double colon `::` and consist of `device name::hostname::device type::method`. Comments may be added by starting a line with a "#". Comments MUST be on a new line.
-
-Fields:
-
-- **device name** - Name of the device
-- **hostname** - Hostname or IP address of device
-- **device type** - Device type
-- **method** - Device type method used
