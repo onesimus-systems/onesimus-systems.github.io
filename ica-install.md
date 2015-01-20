@@ -13,7 +13,7 @@ Requirements:
 Installing from Debian Package (recommended)
 --------------------------------------------
 
-1. Download the appropiate .deb for your architecture from the [GitHub Release](https://github.com/dragonrider23/infrastructure-config-archive/releases/tag/v2.1.0)
+1. Download the appropiate .deb for your architecture from the [GitHub Release](https://github.com/dragonrider23/infrastructure-config-archive/releases/latest)
 2. Install the .deb file
 3. Edit /opt/icarchive/config/configuration.toml to fit your environment
 4. Restart icarchive service
@@ -21,8 +21,8 @@ Installing from Debian Package (recommended)
 
 Example for 64-bit:
 {% highlight bash %}
-wget https://github.com/dragonrider23/infrastructure-config-archive/releases/download/v2.1.0/infra-config-archive-v2.1.0-linux-amd64.deb
-dpkg -i infra-config-archive-v2.1.0-linux-amd64.deb
+wget https://github.com/dragonrider23/infrastructure-config-archive/releases/download/v2.2.0/infra-config-archive-v2.2.0-linux-amd64.deb
+dpkg -i infra-config-archive-v2.2.0-linux-amd64.deb
 vim /opt/icarchive/config/configuration.toml
 service icarchive restart
 {% endhighlight %}
@@ -30,7 +30,7 @@ service icarchive restart
 Installing from Tarball
 -----------------------
 
-1. Download the appropiate .tar.gz for your architecture from the [GitHub Release](https://github.com/dragonrider23/infrastructure-config-archive/releases/tag/v2.1.0)
+1. Download the appropiate .tar.gz for your architecture from the [GitHub Release](https://github.com/dragonrider23/infrastructure-config-archive/releases/latest)
 2. Untar the folder to an appropiate directory
 3. Copy config/sample-configuration.toml to config/configuration.toml
 3. Edit the configuration to fit your environment
@@ -39,8 +39,8 @@ Installing from Tarball
 
 Example for 64-bit:
 {% highlight bash %}
-wget https://github.com/dragonrider23/infrastructure-config-archive/releases/download/v2.1.0/infra-config-archive-v2.1.0-linux-amd64.tar.gz
-tar zvxf infra-config-archive-v2.1.0-linux-amd64.tar.gz
+wget https://github.com/dragonrider23/infrastructure-config-archive/releases/download/v2.2.0/infra-config-archive-v2.2.0-linux-amd64.tar.gz
+tar zvxf infra-config-archive-v2.2.0-linux-amd64.tar.gz
 cd icarchive
 cp config/sample-configuration.toml config/configuration.toml
 vim config/configuration.toml
