@@ -1,6 +1,6 @@
 ---
 layout: page-no-title
-title: Dandelion - API - Key Management
+title: Dandelion - API - Categories
 permalink: /dandelion/api/categories/
 ---
 
