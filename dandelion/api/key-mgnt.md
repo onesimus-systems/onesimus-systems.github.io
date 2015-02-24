@@ -7,11 +7,43 @@ permalink: /dandelion/api/key-mgnt/
 Dandelion - API Documentation - Key Management
 ----------------------------------------------
 
+Module name: keyManager
+
 Index
 -----
 
+- [testkey](#testkey)
 - [revokekey](#revokekey)
 - [newkey](#newkey)
+
+testkey
+-------
+
+**Endpoint**: `/api/testkey` **note irregular path**
+
+**Parameters**: None
+
+**Description**: Tests that the apikey is valid. This is a useful endpoint for extensions. **Note**: This request doesn't return anything in the `data` field. To check the success, check the `errorcode` field of the return object. A value of 0 means success, a value of 1 means failure. Pay careful attention to this, if comparing as a truth value it will be the opposite of what might be expected.
+
+**Returned Data**:
+
+{% highlight json %}
+{
+	"data": ""
+}
+{% endhighlight %}
+
+**Returned Values**:
+
+- No data returned
+
+**Permissions Needed**:
+
+- None
+
+[&#8657; Top](#index)
+
+* * * * *
 
 revokekey
 ---------
@@ -43,6 +75,8 @@ revokekey
 
 - Edit user (not needed to revoke user's own key)
 
+[&#8657; Top](#index)
+
 * * * * *
 
 newkey
@@ -69,6 +103,8 @@ newkey
 **Permissions Needed**:
 
 - None
+
+[&#8657; Top](#index)
 
 * * * * *
 

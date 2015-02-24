@@ -7,6 +7,8 @@ permalink: /dandelion/api/logs/
 Dandelion - API Documentation - Logs Module
 -------------------------------------------
 
+Module Name: logs
+
 Index
 -----
 
@@ -68,6 +70,8 @@ read
 
 - Read log
 
+[&#8657; Top](#index)
+
 * * * * *
 
 readone
@@ -121,6 +125,8 @@ readone
 
 - Read log
 
+[&#8657; Top](#index)
+
 * * * * *
 
 create
@@ -153,6 +159,8 @@ create
 **Permissions Needed**:
 
 - Create log
+
+[&#8657; Top](#index)
 
 * * * * *
 
@@ -187,6 +195,8 @@ edit
 **Permissions Needed**:
 
 - Edit log
+
+[&#8657; Top](#index)
 
 * * * * *
 
@@ -244,6 +254,8 @@ search
 **Additional Information**:
 
 For the syntax of a search query, see the [search documentation](/dandelion/search).
+
+[&#8657; Top](#index)
 
 * * * * *
 
