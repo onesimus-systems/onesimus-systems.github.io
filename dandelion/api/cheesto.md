@@ -26,7 +26,7 @@ read
 
 **Description**: Get the status for all Ĉeesto enabled users.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -96,7 +96,7 @@ readone
 
 **Description**: Get the status for the user with ID `uid`.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -169,7 +169,7 @@ update
 
 **Description**: Update the status of user `uid` (defaults to ID of API key user). If this request is sent with no parameters, it will assign the user to the status of 'Available' (0) with an empty message and return time of 'Today'.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -199,7 +199,7 @@ statustexts
 
 **Description**: Get the available status texts.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {

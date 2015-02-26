@@ -25,7 +25,7 @@ testkey
 
 **Description**: Tests that the apikey is valid. This is a useful endpoint for extensions. **Note**: This request doesn't return anything in the `data` field. To check the success, check the `errorcode` field of the return object. A value of 0 means success, a value of 1 means failure. Pay careful attention to this, if comparing as a truth value it will be the opposite of what might be expected.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -58,7 +58,7 @@ revokekey
 
 **Description**: Revoke the API key for the user with `uid`. The default value for `uid` is the ID associated with the API key being used to make the request. Because of this, if `uid` is not defined, the key being used with no longer be valid.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -88,7 +88,7 @@ newkey
 
 **Description**: Get a new key for user who is associated with the apikey being used.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {

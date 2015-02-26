@@ -30,7 +30,7 @@ add
 
 **Description**: Create a new category whose parent is the category with id `pid` and whose description/text is `description`. A `pid` of 0 indicates a root category.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -64,7 +64,7 @@ edit
 
 **Description**: Update category `cid` with the description/text `description`.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -97,7 +97,7 @@ delete
 
 **Description**: Delete category `cid`. This operation will reassign all children categories to the parent of the deleted category. This will not affect the category associated with logs. Logs with the deleted category will remain in that category.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {

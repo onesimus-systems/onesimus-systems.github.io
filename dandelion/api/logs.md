@@ -32,7 +32,7 @@ read
 
 **Description**: Returns `limit` number of logs newest first. `offset` is used for pagination.
 
-**Returned Data** (array of logs):
+**Example Return Data** (array of logs):
 
 {% highlight json %}
 {
@@ -87,7 +87,7 @@ readone
 
 **Description**: Returns log with id of `logid`.
 
-**Returned Data** (single log, always index 0 (data[0])):
+**Example Return Data** (single log, always index 0 (data[0])):
 
 {% highlight json %}
 {
@@ -144,7 +144,7 @@ create
 
 **Description**: Create a new log with `title` and content `body`. `cat` should be a string of the category separated by colons for each level. E.g. "Logs:Networking"
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -180,7 +180,7 @@ edit
 
 **Description**: Edit log with `logid` using `title` and content `body`. `cat` should be a string of the category separated by colons for each level. E.g. "Logs:Networking"
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -215,7 +215,7 @@ search
 
 **Description**: Returns `limit` number of logs matching `query`. `offset` is used for pagination. If you want to get all the logs that match the query, pass a rather large number as the `limit`.
 
-**Returned Data** (array of logs):
+**Example Return Data** (array of logs):
 
 {% highlight json %}
 {

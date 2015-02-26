@@ -33,7 +33,7 @@ resetpassword
 
 **Description**: Reset password for `uid` (defaults to API key user) to password `pw`.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -70,7 +70,7 @@ create
 
 **Description**: Create new user. The `cheesto` parameter determines if a Ĉeesto account will be created for this user.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -107,7 +107,7 @@ save
 
 **Description**: Edit properties of a user. The defaults for optional parameters are the values currently present on the user.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -140,7 +140,7 @@ delete
 
 **Description**: Delete user `uid`.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -169,7 +169,7 @@ getuserslist
 
 **Description**: Get list of user's and their information
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -219,7 +219,7 @@ getuserinfo
 
 **Description**: Get information for user `uid`.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {

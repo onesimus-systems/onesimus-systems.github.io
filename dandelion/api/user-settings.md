@@ -29,7 +29,7 @@ saveloglimit
 
 **Description**: Log limit is the number of logs to show per page on the dashboard, and the number of logs to return by default from a logs read command without a limit. A request without `limit` is effectivly resetting the setting.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -62,7 +62,7 @@ savetheme
 
 **Description**: Saves the user's preferred theme for the official Dandelion UI. A list of available themes can be received by calling the `getthemelist` task. A request without `theme` is effectivly resetting the setting.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
@@ -91,7 +91,7 @@ getthemelist
 
 **Description**: Returns an array of theme names.
 
-**Returned Data**:
+**Example Return Data**:
 
 {% highlight json %}
 {
