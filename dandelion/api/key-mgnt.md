@@ -7,23 +7,23 @@ permalink: /dandelion/api/key-mgnt/
 Dandelion - API Documentation - Key Management
 ----------------------------------------------
 
-Module name: keyManager
+Module name: keyanager
 
 Index
 -----
 
-- [testkey](#testkey)
-- [revokekey](#revokekey)
-- [newkey](#newkey)
+- [test](#test)
+- [revoke](#revoke)
+- [generate](#generate)
 
-testkey
--------
+test
+----
 
-**Endpoint**: `/api/testkey` **note irregular path**
+**Endpoint**: `/api/key/test`
 
 **Parameters**: None
 
-**Description**: Tests that the apikey is valid. This is a useful endpoint for extensions. **Note**: This request doesn't return anything in the `data` field. To check the success, check the `errorcode` field of the return object. A value of 0 means success, a value of 1 means failure. Pay careful attention to this, if comparing as a truth value it will be the opposite of what might be expected.
+**Description**: Tests that the apikey is valid. This is a useful endpoint for extensions. An easy way to check the success is to check the `errorcode` field of the return object. A value of 0 means success, a value of 1 means failure. Pay careful attention to this, if comparing as a truth value it will be the opposite of what might be expected.
 
 **Example Return Data**:
 
@@ -35,7 +35,7 @@ testkey
 
 **Returned Values**:
 
-- No data returned
+- data (string) - The message "Key is good" on success, empty on failure.
 
 **Permissions Needed**:
 
@@ -45,10 +45,10 @@ testkey
 
 * * * * *
 
-revokekey
----------
+revoke
+------
 
-**Endpoint**: `/api/keymanager/revokekey`
+**Endpoint**: `/api/key/revoke`
 
 **Parameters**: `[uid]`
 
@@ -79,14 +79,14 @@ revokekey
 
 * * * * *
 
-newkey
-------
+generate
+--------
 
-**Endpoint**: `/api/keymanager/newkey`
+**Endpoint**: `/api/key/generate`
 
 **Parameters**: None
 
-**Description**: Get a new key for user who is associated with the apikey being used.
+**Description**: Generate a new key for user who is associated with the apikey being used.
 
 **Example Return Data**:
 

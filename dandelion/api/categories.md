@@ -12,14 +12,14 @@ Module name: categories
 Index
 -----
 
-- [add](#add)
+- [create](#create)
 - [edit](#edit)
 - [delete](#delete)
 
-add
----
+create
+------
 
-**Endpoint**: `/api/categories/add`
+**Endpoint**: `/api/categories/create`
 
 **Parameters**: `pid`, `description`
 

@@ -14,8 +14,8 @@ Index
 
 - [getlist](#getlist)
 - [getgroup](#getgroup)
-- [save](#save)
 - [create](#create)
+- [edit](#edit)
 - [delete](#delete)
 - [getuserrights](#getuserrights)
 
@@ -117,40 +117,6 @@ getgroup
 
 * * * * *
 
-save
-----
-
-**Endpoint**: `/api/rights/save`
-
-**Parameters**: `groupid`, `rights`
-
-| Parameter     | Type   | Default | Required |
-|---------------|--------|---------|----------|
-| `groupid`     | int    |         | true     |
-| `rights`      | string |         | true     |
-
-**Description**: Edit `groupid` and assign it the permissions `rights`. `rights` is a stringified JSON object with the format as returned by the [getuserrights](#getuserrights) endpoint.
-
-**Example Return Data**:
-
-{% highlight json %}
-{
-	"data": "Success or error message"
-}
-{% endhighlight %}
-
-**Returned Values**:
-
-- data (string) - User displayable string if the save was successful or not
-
-**Permissions Needed**:
-
-- Edit group
-
-[&#8657; Top](#index)
-
-* * * * *
-
 create
 ------
 
@@ -180,6 +146,40 @@ create
 **Permissions Needed**:
 
 - Add group
+
+[&#8657; Top](#index)
+
+* * * * *
+
+edit
+----
+
+**Endpoint**: `/api/rights/edit`
+
+**Parameters**: `groupid`, `rights`
+
+| Parameter     | Type   | Default | Required |
+|---------------|--------|---------|----------|
+| `groupid`     | int    |         | true     |
+| `rights`      | string |         | true     |
+
+**Description**: Edit `groupid` and assign it the permissions `rights`. `rights` is a stringified JSON object with the format as returned by the [getuserrights](#getuserrights) endpoint.
+
+**Example Return Data**:
+
+{% highlight json %}
+{
+	"data": "Success or error message"
+}
+{% endhighlight %}
+
+**Returned Values**:
+
+- data (string) - User displayable string if the save was successful or not
+
+**Permissions Needed**:
+
+- Edit group
 
 [&#8657; Top](#index)
 

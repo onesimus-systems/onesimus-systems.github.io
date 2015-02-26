@@ -14,7 +14,7 @@ Index
 
 - [resetpassword](#resetpassword)
 - [create](#create)
-- [save](#save)
+- [edit](#edit)
 - [delete](#delete)
 - [getuserslist](#getuserslist)
 - [getuserinfo](#getuserinfo)
@@ -90,10 +90,10 @@ create
 
 * * * * *
 
-save
+edit
 ----
 
-**Endpoint**: `/api/users/save`
+**Endpoint**: `/api/users/edit`
 
 **Parameters**: `uid`, `[fullname]`, `[role]`, `[prompt]`, `[theme]`
 
