@@ -13,7 +13,6 @@ Index
 -----
 
 - [read](#read)
-- [readone](#readone)
 - [update](#update)
 - [statustexts](#statustexts)
 
@@ -22,9 +21,13 @@ read
 
 **Endpoint**: `/api/cheesto/read`
 
-**Parameters**: None
+**Parameters**: `[uid]`
 
-**Description**: Get the status for all Ĉeesto enabled users.
+| Parameter     | Type   | Default | Required |
+|---------------|--------|---------|----------|
+| `uid`         | int    |         | false    |
+
+**Description**: Get the statuses for Ĉeesto enabled users. If `uid` is given, only that user's status will be returned.
 
 **Example Return Data**:
 
@@ -63,76 +66,6 @@ read
 **Returned Values**:
 
 - "0": Row of data for each Ĉeesto user
-	* id (int) - Ĉeesto ID of user
-	* uid (int) - ID of associated user
-	* realname (string) - Name of user
-	* status (int) - ID of status (associated with index of statusOptions)
-	* message (string) - Away message
-	* returntime (string, time) - Time set by user of their return to "Available"
-	* dmodified (string, datetime) - When the status was last modified
-	* statusInfo (array) - Symbol and color associated with the set status (used in official UI)
-		* symbol (string) - HTML encoded symbol either &#x2713;, &#8709;, or &#x2717;
-		* color (string) - Color associated with status either green, blue, or red
-- statusOptions (array) - List of available statuses. Their index constitues the "status" field for a user
-
-**Permissions Needed**:
-
-- Read Ĉeesto
-
-[&#8657; Top](#index)
-
-* * * * *
-
-readone
--------
-
-**Endpoint**: `/api/cheesto/readone`
-
-**Parameters**: `uid`
-
-| Parameter     | Type   | Default | Required |
-|---------------|--------|---------|----------|
-| `uid`         | int    |         | true     |
-
-**Description**: Get the status for the user with ID `uid`.
-
-**Example Return Data**:
-
-{% highlight json %}
-{
-	"data": {
-		"0": {
-			"id": "1",
-			"uid": "1",
-			"realname": "Admin",
-			"status": "0",
-			"message": "",
-			"returntime": "00:00:00",
-			"dmodified": "2015-01-06 16:16:58",
-			"statusInfo": {
-				"symbol":"&#x2713;",
-				"color":"green"
-			}
-		},
-		"statusOptions": [
-			"Available",
-			"Away From Desk",
-			"At Lunch",
-			"Out for Day",
-			"Out",
-			"Appointment",
-			"Do Not Disturb",
-			"Meeting",
-			"Out Sick",
-			"Vacation"
-		]
-	}
-}
-{% endhighlight %}
-
-**Returned Values**:
-
-- "0": Single row for user
 	* id (int) - Ĉeesto ID of user
 	* uid (int) - ID of associated user
 	* realname (string) - Name of user
