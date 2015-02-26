@@ -5,8 +5,8 @@ permalink: /about/
 menutitle: About
 ---
 
-Onesimus Systems began in Fall 2013 with Dandelion ([source](https://github.com/dragonrider23/dandelion)). Since then many more projects have been created all with the intent of either solving a problem, or learning new techniques.
-In the main GitHub repo [github.com/dragonrider23](https://github.com/dragonrider23) you will find several projects, some complete some not so much. But nonetheless, each has a purpose.
-Most applications are written in PHP or Go, more of the latter these days. All are released as open-source software. Use them, learn from them, help me improve them.
+Onesimus Systems began in Fall 2013 out of a passion to write and learn about software. In particular web applications and their place in modern technology. Out of this came the first project called Dandelion ([source](https://github.com/onesimus-systems/dandelion)). Since then many more projects have been created each of them helping to grow and shape the way development is done.
 
-You can find the source code for this site at: [github.com/dragonrider23/dragonrider23.github.io](https://github.com/dragonrider23/dragonrider23.github.io)
+All projects from Onesimus are available at the GitHub page [github.com/onesimus-systems](https://github.com/onesimus-systems). All projects are released as open-source software. Use them, learn from them, and contribute so that together we can build something amazing.
+
+You can find the source code for this site at: [http://github.com/onesimus-systems/onesimus-systems.github.io](http://github.com/onesimus-systems/onesimus-systems.github.io)

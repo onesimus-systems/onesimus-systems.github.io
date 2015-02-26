@@ -1,11 +1,10 @@
 # Site settings
 title: Onesimus Systems
 email: onesimussystems@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Official blog and news source for Onesimus Systems.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://onesimussystems.com" # the base hostname & protocol for your site
-github_username:  dragonrider23
+description: "Official blog and news source for Onesimus Systems."
+baseurl: ""
+url: "http://onesimussystems.com"
+github_username:  onesimus-systems
 
 # Build settings
 markdown: kramdown
