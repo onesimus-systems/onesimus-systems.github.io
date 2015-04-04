@@ -41,11 +41,7 @@ read
 			"status": "0",
 			"message": "",
 			"returntime": "00:00:00",
-			"dmodified": "2015-01-06 16:16:58",
-			"statusInfo": {
-				"symbol":"&#x2713;",
-				"color":"green"
-			}
+			"dmodified": "2015-01-06 16:16:58"
 		},
 		"statusOptions": [
 			"Available",
@@ -73,9 +69,6 @@ read
 	* message (string) - Away message
 	* returntime (string, time) - Time set by user of their return to "Available"
 	* dmodified (string, datetime) - When the status was last modified
-	* statusInfo (array) - Symbol and color associated with the set status (used in official UI)
-		* symbol (string) - HTML encoded symbol either &#x2713;, &#8709;, or &#x2717;
-		* color (string) - Color associated with status either green, blue, or red
 - statusOptions (array) - List of available statuses. Their index constitues the "status" field for a user
 
 **Permissions Needed**:
@@ -97,10 +90,10 @@ update
 |---------------|--------|---------|----------|
 | `uid`         | int    |         | false    |
 | `message`     | string | Empty   | false    |
-| `status`      | int    | 0       | false    |
+| `status`      | string | 'Available' | false    |
 | `returntime`  | string | 'Today' | false	  |
 
-**Description**: Update the status of user `uid` (defaults to ID of API key user). If this request is sent with no parameters, it will assign the user to the status of 'Available' (0) with an empty message and return time of 'Today'.
+**Description**: Update the status of user `uid` (defaults to ID of API key user). If this request is sent with no parameters, it will assign the user to the status of 'Available' with an empty message and return time of 'Today'.
 
 **Example Return Data**:
 
@@ -130,7 +123,7 @@ statustexts
 
 **Parameters**: None
 
-**Description**: Get the available status texts.
+**Description**: Get the available status texts as defined in the app configuration.
 
 **Example Return Data**:
 
