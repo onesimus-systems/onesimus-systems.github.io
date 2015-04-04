@@ -55,6 +55,4 @@ API Enpoints
 
 [User Management](/dandelion/api/users)
 
-[Mail/Messages](/dandelion/api/messages)
-
 [Key Management](/dandelion/api/key-mgnt)

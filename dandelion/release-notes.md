@@ -10,6 +10,7 @@ Dandelion - Release Notes
 **v6.0.0** - **Unstable (develop branch)**
 
 - New: The category of a log can be edited
+- New: Dandelion has undergone a major face lift
 - Improved: The public API is completed. All tasks can now be done through the API.
     * [API Documentation](/dandelion/api)
 - Improved: Unified, simplified, and more powerful search!!!
@@ -22,6 +23,7 @@ Dandelion - Release Notes
     * New routing functionality
     * Better templating
     * Cleaner bootstrap and application initialization
+- Removed: The mail system has been removed because it didn't fit well into the idea of Dandelion
 
 **v5.0.3** - **Current Stable (master branch)**
 
