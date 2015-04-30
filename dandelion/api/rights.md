@@ -85,19 +85,12 @@ getgroup
 		"permissions": {
 			"createlog": false,
 			"editlog": false,
-			"viewlog": true,
-			"addcat": false,
-			"editcat": false,
-			"deletecat": false,
-			"adduser": false,
-			"edituser": false,
-			"deleteuser": false,
-			"addgroup": false,
-			"editgroup": false,
-			"deletegroup": false,
-			"viewcheesto": true,
-			"updatecheesto": false,
-			"admin": false
+			... (see full list below)
+		}
+		"permissionNames": {
+			"createlog": "Create a log entry",
+			"editlog": "Edit any log entry",
+			...
 		}
 	}
 }
@@ -108,6 +101,7 @@ getgroup
 - id (int) - ID of role, used to get the permissions with [getgroup](#getgroup)
 - role (string) - Name of role/group
 - permissions (array) - Keyed array of permission names and their values
+- permissionNames (array) - Keyed array of human readable permission names keyed to their respecive permission
 
 **Permissions Needed**:
 
@@ -127,9 +121,9 @@ create
 | Parameter     | Type   | Default | Required |
 |---------------|--------|---------|----------|
 | `name`        | string |         | true     |
-| `rights`      | string |         | true     |
+| `rights`      | string |         | false    |
 
-**Description**: Create a new group named `name` and assign it the permissions `rights`. `rights` is a stringified JSON object with the format as returned by the [getuserrights](#getuserrights) endpoint.
+**Description**: Create a new group named `name` and assign it the permissions `rights`. `rights` is a stringified JSON object with the format as returned by the [getuserrights](#getuserrights) endpoint. If `rights` is omitted, the group is blank meaning it has no permission set to true by default.
 
 **Example Return Data**:
 
@@ -234,19 +228,7 @@ getuserrights
 	"data": {
 		"createlog": false,
 		"editlog": false,
-		"viewlog": true,
-		"addcat": false,
-		"editcat": false,
-		"deletecat": false,
-		"adduser": false,
-		"edituser": false,
-		"deleteuser": false,
-		"addgroup": false,
-		"editgroup": false,
-		"deletegroup": false,
-		"viewcheesto": true,
-		"updatecheesto": false,
-		"admin": false
+		... (see full list below)
 	}
 }
 {% endhighlight %}
@@ -260,6 +242,26 @@ getuserrights
 - None
 
 [&#8657; Top](#index)
+
+* * * * *
+
+Full permission list:
+
+- "createlog": false
+- "editlog": false
+- "viewlog": true
+- "createcat": false
+- "editcat": false
+- "deletecat": false
+- "createuser": false
+- "edituser": false
+- "deleteuser": false
+- "creategroup": false
+- "editgroup": false
+- "deletegroup": false
+- "viewcheesto": true
+- "updatecheesto": false
+- "admin": false
 
 * * * * *
 
