@@ -15,7 +15,7 @@ Searching Logs in Dandelion
 
 * backslash `\`
 * double quote `"`
-* exclamation mark `!` (if at beginning of query and not for negation, e.g. `title:"\!query"`)
+* exclamation mark `!` (if used at beginning of query and not for negation, e.g. `title:"\!query"`)
 
 **Operators**
 
@@ -31,7 +31,7 @@ Searching Logs in Dandelion
 
 * **Note**: Searches are case insensative
 * Date range: `date:"2015-01-01 to 2015-01-30"` returns logs with date in the range. This also takes the negation operator returning then the logs whose date is not in the range.
-* Date keywords: The date fields takes the words `today`, `yesterday`, and `last week` as queries. They will be translated into the appropriate date format as of the day the query is given.
+* Date keywords: The date fields takes the words `today`, `yesterday`, and `last week` as queries. They will be translated into the appropriate date relative to when the query was performed.
 
 Examples
 --------
@@ -55,3 +55,7 @@ Dates:
 - Logs created between 01/01/2015 and 01/30/2015: `date:"2015-01-01 to 2015-01-30"`
 - Logs not created between 01/01/2015 and 01/30/2015: `date:"!2015-01-01 to 2015-01-30"`
 - Logs created yesterday: `date:"yesterday"`
+
+And of course they can be used together:
+
+- `title:"windows" date:"2015-02-18"`

@@ -16,8 +16,8 @@ Index
 - [create](#create)
 - [edit](#edit)
 - [delete](#delete)
-- [getuserslist](#getuserslist)
-- [getuserinfo](#getuserinfo)
+- [getusers](#getusers)
+- [getuser](#getuser)
 
 resetpassword
 -------------
@@ -65,10 +65,10 @@ create
 | `username`    | string |         | true     |
 | `password`    | string |         | true     |
 | `fullname`    | string |         | true     |
-| `role`        | string |         | true     |
+| `role`        | int    |         | true     |
 | `cheesto`     | string | true    | false    |
 
-**Description**: Create new user. The `cheesto` parameter determines if a Ĉeesto account will be created for this user.
+**Description**: Create new user. The `cheesto` parameter determines if a Ĉeesto account will be created for this user. `role` is the ID of the group to which the user should belong. (See [Rights getlist function](/dandelion/api/rights/#getlist))
 
 **Example Return Data**:
 
@@ -101,7 +101,7 @@ edit
 |---------------|--------|---------|----------|
 | `uid`         | int    |         | true     |
 | `fullname`    | string |         | false    |
-| `role`        | string |         | false    |
+| `role`        | int    |         | false    |
 | `prompt`      | int    |         | false    |
 | `theme`       | string |         | false    |
 
@@ -160,10 +160,10 @@ delete
 
 * * * * *
 
-getuserslist
-------------
+getusers
+--------
 
-**Endpoint**: `/api/users/getuserslist`
+**Endpoint**: `/api/users/getusers`
 
 **Parameters**: None
 
@@ -173,30 +173,31 @@ getuserslist
 
 {% highlight json %}
 {
-	"data": [
-		{
-			"userid": "1",
-			"realname": "Admin",
+	"data": {
+		"0": {
+			"id": "1",
+			"fullname": "Admin",
 			"username": "admin",
-			"role": "admin",
-			"datecreated": "2014-01-1",
+			"group_id": "1",
+			"created": "2014-01-1",
 			"theme": "Halloween",
-			"firsttime": "0"
+			"initial_login": "0"
 		}
-	]
+	}
 }
 {% endhighlight %}
 
 **Returned Values**:
 
-- data (array) - Row for each user
-	* userid (int) - ID of user
-	* realname (string) - Full name of user
-	* username (string) - ...username
-	* role (string) - Role for permissions
-	* datecreated (string, date) - When the user was created
-	* theme (string) - Preferred theme of user
-	* firsttime (int) - Value to determine if user needs to reset password, also reserved for future use
+**Per User**
+
+- id (int) - ID of user
+- fullname (string) - Full name of user
+- username (string) - ...username
+- group_id (int) - ID for user's group
+- created (string, date) - When the user was created
+- theme (string) - Preferred theme of user
+- initial_login (int) - Value to determine if user needs to reset password, also reserved for future use
 
 **Permissions Needed**:
 
@@ -206,10 +207,10 @@ getuserslist
 
 * * * * *
 
-getuserinfo
-------------
+getuser
+-------
 
-**Endpoint**: `/api/users/getuserinfo`
+**Endpoint**: `/api/users/getuser`
 
 **Parameters**: `uid`
 
@@ -224,26 +225,30 @@ getuserinfo
 {% highlight json %}
 {
 	"data": {
-		"userid": "1",
-		"realname": "Admin",
-		"username": "admin",
-		"role": "admin",
-		"datecreated": "2014-01-01",
-		"theme": "Halloween",
-		"firsttime": "0"
+		"0": {
+			"id": "1",
+			"fullname": "Admin",
+			"username": "admin",
+			"group_id": "1",
+			"created": "2014-01-1",
+			"theme": "Halloween",
+			"initial_login": "0"
+		}
 	}
 }
 {% endhighlight %}
 
 **Returned Values**:
 
-* userid (int) - ID of user
-* realname (string) - Full name of user
-* username (string) - ...username
-* role (string) - Role for permissions
-* datecreated (string, date) - When the user was created
-* theme (string) - Preferred theme of user
-* firsttime (int) - Value to determine if user needs to reset password, also reserved for future use
+**Per User**
+
+- id (int) - ID of user
+- fullname (string) - Full name of user
+- username (string) - ...username
+- group_id (int) - ID for user's group
+- created (string, date) - When the user was created
+- theme (string) - Preferred theme of user
+- initial_login (int) - Value to determine if user needs to reset password, also reserved for future use
 
 **Permissions Needed**:
 

@@ -36,12 +36,13 @@ read
 	"data": {
 		"0": {
 			"id": "1",
-			"uid": "1",
-			"realname": "Admin",
+			"user_id": "1",
+			"fullname": "Admin",
 			"status": "0",
 			"message": "",
 			"returntime": "00:00:00",
-			"dmodified": "2015-01-06 16:16:58"
+			"modified": "2015-01-06 16:16:58",
+			"disabled": "0"
 		},
 		"statusOptions": [
 			"Available",
@@ -61,14 +62,19 @@ read
 
 **Returned Values**:
 
-- "0": Row of data for each Ĉeesto user
-	* id (int) - Ĉeesto ID of user
-	* uid (int) - ID of associated user
-	* realname (string) - Name of user
-	* status (int) - ID of status (associated with index of statusOptions)
-	* message (string) - Away message
-	* returntime (string, time) - Time set by user of their return to "Available"
-	* dmodified (string, datetime) - When the status was last modified
+**Per User**
+
+- id (int) - Ĉeesto ID of user
+- user_id (int) - ID of associated user
+- fullname (string) - Name of user
+- status (int) - ID of status (associated with index of statusOptions)
+- message (string) - Away message
+- returntime (string, time) - Time set by user of their return to "Available"
+- modified (string, datetime) - When the status was last modified
+- disabled (bool) - Whether the cheesto account is disabled
+
+**statusOptions**
+
 - statusOptions (array) - List of available statuses. Their index constitues the "status" field for a user
 
 **Permissions Needed**:
@@ -91,9 +97,9 @@ update
 | `uid`         | int    |         | false    |
 | `message`     | string | Empty   | false    |
 | `status`      | string | 'Available' | false    |
-| `returntime`  | string | 'Today' | false	  |
+| `returntime`  | string | '00:00:00' | false	  |
 
-**Description**: Update the status of user `uid` (defaults to ID of API key user). If this request is sent with no parameters, it will assign the user to the status of 'Available' with an empty message and return time of 'Today'.
+**Description**: Update the status of user `uid` (defaults to ID of API key user). If this request is sent with no parameters, it will assign the user to the status of 'Available' with an empty message and return time of '00:00:00'.
 
 **Example Return Data**:
 

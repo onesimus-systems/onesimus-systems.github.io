@@ -5,7 +5,7 @@ permalink: /dandelion/
 menutitle: Dandelion
 ---
 
-Dandelion is a web-based journal design to make it dead simple to keep track of just about anything. Dandelion helps you remember what you did those many moons ago. Dandelion was developed out of the mindset of IT. However, it is versatile enough to be used in just about any situation.
+Dandelion is a web-based logbook designed to make it simple to keep track of just about anything. Dandelion helps you remember what you did those many moons ago. Dandelion was developed out of the mindset of IT. However, it is versatile enough to be used in just about any situation.
 
 License: [GPLv3](http://www.gnu.org/licenses/gpl-3.0.html)
 
@@ -17,12 +17,11 @@ Current Unstable: [v6.0.0](https://github.com/dragonrider23/dandelion/tree/devel
 
 Documentation:
 
-* [General Use Help](/dandelion/general-use)
-* [Administering Dandelion](/dandelion/administration)
-* [Searching the Logs](/dandelion/search)
-* [API Docs](/dandelion/api)
 * [Installation](/dandelion/install)
 * [Release Notes](/dandelion/release-notes)
+* [Search Docs](/dandelion/search)
+* [API Docs](/dandelion/api)
+* [Theme Docs](/dandelion/theme-docs)
 
 Contributing
 ------------

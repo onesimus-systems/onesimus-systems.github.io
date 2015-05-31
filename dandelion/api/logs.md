@@ -13,7 +13,6 @@ Index
 -----
 
 - [read](#read)
-- [readone](#readone)
 - [create](#create)
 - [edit](#edit)
 - [search](#search)
@@ -27,10 +26,11 @@ read
 
 | Parameter | Type | Default | Required |
 |-----------|------|---------|----------|
+| `logid`   | int  | 		 | false    |
 | `offset`  | int  | 0       | false    |
 | `limit`	| int  |<span title="User defined">UD</span> | false |
 
-**Description**: Returns `limit` number of logs newest first. `offset` is used for pagination.
+**Description**: Returns `limit` number of logs newest first. `offset` is used for pagination. If `logid` is sent, then only the log with that id is returned. No metadata is returned for a request using `logid`.
 
 **Example Return Data** (array of logs):
 
@@ -38,16 +38,22 @@ read
 {
 	"data": {
 		"0": {
-			"logid": "1",
-			"datec": "2015-02-12",
-			"timec": "12:24:53",
+			"id": "1",
+			"date_created": "2015-02-12",
+			"time_created": "12:24:53",
 			"title": "Log title",
-			"entry": "Log content, contains HTML",
-			"usercreated": "1",
-			"cat": "Logs",
-			"edited": "0",
-			"realname": "Admin",
+			"body": "Log content, contains HTML",
+			"user_id": "1",
+			"category": "Logs",
+			"is_edited": "0",
+			"fullname": "Admin",
 			"canEdit": true
+		},
+		"metadata": {
+			"limit": "25",
+			"logSize": "1000",
+			"offset": "0",
+			"resultCount": "25"
 		}
 	}
 }
@@ -55,71 +61,25 @@ read
 
 **Returned Values**:
 
-- logid (int) - ID number of log
-- datec (string) - Date log was created formatted in Y-m-d
-- timec (string) - Time log was created formated in H:i:s
+**Per Log**
+
+- id (int) - ID number of log
+- date_created (string) - Date log was created formatted in Y-m-d
+- time_created (string) - Time log was created formated in H:i:s
 - title (string) - Title of log
-- entry (string) - Body of log
-- usercreated (int) - ID of user who created the log
-- cat (string) - String representation of the log's category
-- edited (bool) - Has the log been edited, 0 or 1
-- realname (string) - Name of user who created log
+- body (string) - Body of log
+- user_id (int) - ID of user who created the log
+- category (string) - String representation of the log's category
+- is_edited (bool) - Has the log been edited, 0 or 1
+- fullname (string) - Name of user who created log
 - canEdit (bool) - Does the user have permission to edit the log (for visual clues only, actual permissions are enforced server-side)
 
-**Permissions Needed**:
+**Metadata** (not returned if `logid` is used)
 
-- Read log
-
-[&#8657; Top](#index)
-
-* * * * *
-
-readone
--------
-
-**Endpoint**: `/api/logs/readone`
-
-**Parameters**: `logid`
-
-| Parameter | Type | Default | Required |
-|-----------|------|---------|----------|
-| `logid`   | int  | 		 | true     |
-
-**Description**: Returns log with id of `logid`.
-
-**Example Return Data** (single log, always index 0 (data[0])):
-
-{% highlight json %}
-{
-	"data": {
-		"0": {
-			"logid": "1",
-			"datec": "2015-02-12",
-			"timec": "12:24:53",
-			"title": "Log title",
-			"entry": "Log content, contains HTML",
-			"usercreated": "1",
-			"cat": "Logs",
-			"edited": "0",
-			"realname": "Admin",
-			"canEdit": true
-		}
-	}
-}
-{% endhighlight %}
-
-**Returned Values**:
-
-- logid (int) - ID number of log
-- datec (string) - Date log was created formatted in Y-m-d
-- timec (string) - Time log was created formated in H:i:s
-- title (string) - Title of log
-- entry (string) - Body of log
-- usercreated (int) - ID of user who created the log
-- cat (string) - String representation of the log's category
-- edited (bool) - Has the log been edited, 0 or 1
-- realname (string) - Name of user who created log
-- canEdit (bool) - Does the user have permission to edit the log (for visual clues only, actual permissions are enforced server-side)
+- limit (int) - User defined number of logs to return
+- logSize(int) - Number of total logs
+- offset (int) - Database ID offset used to get results
+- resultCount (int) - Number of logs returned
 
 **Permissions Needed**:
 
@@ -230,6 +190,12 @@ search
 			"cat": "Logs",
 			"edited": "0",
 			"realname": "Admin"
+		},
+		"metadata": {
+			"limit": "25",
+			"logSize": "1000",
+			"offset": "0",
+			"resultCount": "25"
 		}
 	}
 }
@@ -237,15 +203,25 @@ search
 
 **Returned Values**:
 
-- logid (int) - ID number of log
-- datec (string) - Date log was created formatted in Y-m-d
-- timec (string) - Time log was created formated in H:i:s
+**Per Log**
+
+- id (int) - ID number of log
+- date_created (string) - Date log was created formatted in Y-m-d
+- time_created (string) - Time log was created formated in H:i:s
 - title (string) - Title of log
-- entry (string) - Body of log
-- usercreated (int) - ID of user who created the log
-- cat (string) - String representation of the log's category
-- edited (bool) - Has the log been edited, 0 or 1
-- realname (string) - Name of user who created log
+- body (string) - Body of log
+- user_id (int) - ID of user who created the log
+- category (string) - String representation of the log's category
+- is_edited (bool) - Has the log been edited, 0 or 1
+- fullname (string) - Name of user who created log
+- canEdit (bool) - Does the user have permission to edit the log (for visual clues only, actual permissions are enforced server-side)
+
+**Metadata**
+
+- limit (int) - User defined number of logs to return
+- logSize(int) - Number of total logs
+- offset (int) - Database ID offset used to get results
+- resultCount (int) - Number of logs returned
 
 **Permissions Needed**:
 

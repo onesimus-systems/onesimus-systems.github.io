@@ -9,21 +9,28 @@ Dandelion - Release Notes
 
 **v6.0.0** - **Unstable (develop branch)**
 
+- New: Interface update
+    * Dandelion has been updated with a fresh, new look. But don't worry, if you don't like the new look, just switch to the Legacy theme.
 - New: The category of a log can be edited
-- New: Dandelion has undergone a major face lift
-- Improved: The public API is completed. All tasks can now be done through the API.
-    * [API Documentation](/dandelion/api)
-- Improved: Unified, simplified, and more powerful search!!!
+- New: Unified, simplified, and more powerful search!!!
     * Search now uses a simple syntax to search any part of a log
-    * [Search Documentation](/dandelion/search)
+    * Sample syntax: ```title:"router 1" categories:"Configuration:Routes"```
+    * [Documentation](/dandelion/search)
+- Improved: Completed and cleaned public API
+    * All tasks can now be done through the API.
+    * [Documentation](/dandelion/api)
 - Improved: Major source rewrite
-    * Isolated public and application folders
-    * Improved application structure for looser dependencies
-    * Ability to easily implement different databases (Postgres and SQLite coming)
-    * New routing functionality
-    * Better templating
-    * Cleaner bootstrap and application initialization
-- Removed: The mail system has been removed because it didn't fit well into the idea of Dandelion
+    * This help development in several ways:
+        * Isolated public and application folders
+        * Improved application structure for looser dependencies
+        * Ability to easily implement different databases (Postgres and SQLite coming)
+        * New routing functionality
+        * Better templating
+        * Cleaner bootstrap and application initialization
+- Improved: Theme management system
+    * Themes are handled a bit more elegantly and the structure have been simplified. Making creating themes much easier.
+- Improved: Replaced TinyMCE with jHtmlArea
+- Removed: The mail system has been removed because it didn't fit well with the purpose of Dandelion
 
 **v5.0.3** - **Current Stable (master branch)**
 

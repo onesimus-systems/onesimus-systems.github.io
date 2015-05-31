@@ -26,7 +26,7 @@ getlist
 
 **Parameters**: None
 
-**Description**: Get list of role names and their IDs.
+**Description**: Get list of group names and their IDs.
 
 **Example Return Data**:
 
@@ -35,15 +35,15 @@ getlist
 	"data": [
 		{
 			"id": "1",
-			"role": "user"
+			"name": "user"
 		},
 		{
 			"id": "2",
-			"role": "admin"
+			"name": "admin"
 		},
 		{
 			"id": "3",
-			"role": "guest"
+			"name": "guest"
 		}
 	]
 }
@@ -51,8 +51,8 @@ getlist
 
 **Returned Values**:
 
-- id (int) - ID of role, used to get the permissions with [getgroup](#getgroup)
-- role (string) - Name of role/group
+- id (int) - ID of group, used to get the permissions with [getgroup](#getgroup)
+- name (string) - Name of group
 
 **Permissions Needed**:
 
@@ -81,7 +81,7 @@ getgroup
 {
 	"data": {
 		"id": "3",
-		"role": "guest",
+		"name": "guest",
 		"permissions": {
 			"createlog": false,
 			"editlog": false,
@@ -98,8 +98,8 @@ getgroup
 
 **Returned Values**:
 
-- id (int) - ID of role, used to get the permissions with [getgroup](#getgroup)
-- role (string) - Name of role/group
+- id (int) - ID of group, used to get the permissions with [getgroup](#getgroup)
+- name (string) - Name of group
 - permissions (array) - Keyed array of permission names and their values
 - permissionNames (array) - Keyed array of human readable permission names keyed to their respecive permission
 
@@ -139,7 +139,7 @@ create
 
 **Permissions Needed**:
 
-- Add group
+- Create group
 
 [&#8657; Top](#index)
 

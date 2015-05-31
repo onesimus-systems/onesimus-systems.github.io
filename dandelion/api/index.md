@@ -7,7 +7,7 @@ permalink: /dandelion/api/
 Dandelion - API Documentation
 -----------------------------
 
-The Dandelion API is a simplistic and standardized way of getting data from a Dandelion instance. To make an api request, you'll need the API key for a user and the hostname. The urls take the form of `http[s]://[path-to-dandelion]/api/{module}/{task}`. Every call requires some HTTP parameters to be passed either through GET or POST. The permissions used for the call comes from the user's key.
+The Dandelion API is a simple and standardized way of getting data from a Dandelion instance. To make an api request, you'll need the API key for a user and the hostname. The urls take the form of `http[s]://[path-to-dandelion]/api/{module}/{task}`. Every call requires some HTTP parameters to be passed either through GET or POST. The permissions used for the call comes from the user's key.
 
 All requests must pass the parameter `apikey` containing the user's key. If this parameter doesn't exist the call will fail.
 
@@ -28,8 +28,8 @@ The `errorcode` field is an integer in the range [0,6] with the following meanin
 
 - 0 - Successful API call
 - 1 - Invalid API key
-- 2 - Reserved for future use
-- 3 - Reserved for internal use
+- 2 - External API disabled
+- 3 - Action requires active login
 - 4 - Insufficient permissions
 - 5 - General error
 - 6 - Server error

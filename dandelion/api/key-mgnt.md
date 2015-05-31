@@ -23,19 +23,15 @@ test
 
 **Parameters**: None
 
-**Description**: Tests that the apikey is valid. This is a useful endpoint for extensions. An easy way to check the success is to check the `errorcode` field of the return object. A value of 0 means success, a value of 1 means failure. Pay careful attention to this, if comparing as a truth value it will be the opposite of what might be expected.
+**Description**: Tests that the apikey is valid. This is a useful endpoint for extensions. An easy way to check the success is to check the `errorcode` field of the return object. A value of 0 means success, other values indicate failure means failure.
 
 **Example Return Data**:
 
 {% highlight json %}
 {
-	"data": ""
+	"data": true
 }
 {% endhighlight %}
-
-**Returned Values**:
-
-- data (string) - The message "Key is good" on success, empty on failure.
 
 **Permissions Needed**:
 
@@ -65,11 +61,6 @@ revoke
 	"data": true
 }
 {% endhighlight %}
-
-**Returned Values**:
-
-- data (bool) - Was the request fulfilled successfully
-	* Note: The returned object's `errorcode` and this field may not match. Meaning the request itself may have completed successfully, but saving the data did not.
 
 **Permissions Needed**:
 

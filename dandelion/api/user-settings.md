@@ -58,9 +58,9 @@ savetheme
 
 | Parameter | Type   | Default   | Required |
 |-----------|--------|-----------|----------|
-| `theme`   | string | 'default' | false    |
+| `theme`   | string | 'modern'  | false    |
 
-**Description**: Saves the user's preferred theme for the official Dandelion UI. A list of available themes can be received by calling the `getthemelist` task. A request without `theme` is effectivly resetting the setting.
+**Description**: Saves the user's preferred theme for the official Dandelion UI. A list of available themes can be received by calling the `getthemelist` task. `theme` should be the slug of the desired theme. A request without `theme` will reset to the instance default (Modern is the default theme for a new instance).
 
 **Example Return Data**:
 
@@ -96,15 +96,34 @@ getthemelist
 {% highlight json %}
 {
 	"data": {
-		"theme1",
-		"theme2"
+		"0": {
+			"author": "Author",
+			"description": "Awesome theme",
+			"email": "author@example.org",
+			"extends": "",
+			"files": [],
+			"name": "The Best Theme",
+			"selected": "false",
+			"slug": "best-theme",
+			"version": "1.2.3"
+		}
 	}
 }
 {% endhighlight %}
 
 **Returned Values**:
 
-- data (array) - Theme names, use these names to save a theme for a user
+**Per Theme**
+
+- author (string) - Theme author
+- description (string) - Theme description
+- email (string) - Author/developer email
+- extends (string) - Theme this theme extends
+- files (array) - Manual mapping of page names to files
+- name (string) - Theme name
+- selected (bool) - Whether or not the user is using this theme
+- slug (string) - Shorthand identifier for theme (used to set theme)
+- version (string) - Theme version
 
 **Permissions Needed**:
 
