@@ -3,4 +3,4 @@ title: Dandelion Online version Check
 permalink: /dandelion/versioncheck
 ---
 
-{"version": "6.0.0","name": "Phoenix"}
+{"version":"6.0.0","name":"Phoenix","url":"https://github.com/onesimus-systems/dandelion/releases/tag/v6.0.0"}
