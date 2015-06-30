@@ -45,9 +45,9 @@ Example (Ubuntu, Nginx):
 {% highlight bash %}
 $ mkdir -p /var/www
 $ cd /var/www
-$ wget [archive].tar.gz
-$ tar zvxf [archive].tar.gz
-$ [configure web server as needed]
+$ wget https://github.com/onesimus-systems/dandelion/releases/download/v6.0.0/dandelion-v6.0.0.tar.gz
+$ tar zvxf dandelion-v6.0.0.tar.gz
+$ [configure web server to serve the public directory]
 {% endhighlight %}
 
 Now browse to ```http://[dandelion hostname]/install.php``` to finish the installation.
@@ -60,7 +60,7 @@ Installing Dandelion is an easy and simple task. Just follow these steps and you
 
 1. Grab a copy of Dandelion of Github.
 2. Run ```composer install --no-dev``` from the root Dandelion directory. If you don't have Composer installed please see the [Getting Started](https://getcomposer.org/doc/00-intro.md#locally) guide. This will install PHP dependencies.
-3. Run ```npm install && ./node_modules/.bin/gulp```. This will compile the javascript and stylesheets.
+3. Run ```npm install && ./node_modules/.bin/gulp```. This will compile the TypeScript and stylesheets.
 4. Create a database in MySQL/MariaDB to house Dandelion.
 5. Setup your web server to use the public directory under Dandelion as its root. Under the app/install directory is a sample configuration for Nginx and Apache2. For apache, you will need to enable mod_rewrite and install the apache2 PHP5 module. For Nginx, you will need to install the php-fpm package.
 6. Browse to ```http://[dandelion server]/install.php```.
@@ -84,6 +84,7 @@ $ mkdir -p /var/www
 $ cd /var/www
 $ git clone https://github.com/onesimus-systems/dandelion
 $ cd dandelion
+$ git checkout tags/v6.0.0
 $ composer install --no-dev
 $ npm install && ./node_modules/.bin/gulp
 $ cp app/install/Nginx-sample-config.conf /etc/nginx/sites-available/default
@@ -122,6 +123,7 @@ $ mkdir -p /var/www
 $ cd /var/www
 $ git clone https://github.com/onesimus-systems/dandelion
 $ cd dandelion
+$ git checkout tags/v6.0.0
 $ mysql -u [username] -p
 mysql> CREATE DATABASE [some name];
 mysql> exit;
