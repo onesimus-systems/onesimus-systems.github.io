@@ -45,8 +45,8 @@ Example (Ubuntu, Nginx):
 {% highlight bash %}
 $ mkdir -p /var/www
 $ cd /var/www
-$ wget https://github.com/onesimus-systems/dandelion/releases/download/v6.0.0/dandelion-v6.0.0.tar.gz
-$ tar zvxf dandelion-v6.0.0.tar.gz
+$ wget https://github.com/onesimus-systems/dandelion/releases/download/v6.0.2/dandelion-v6.0.2.tar.gz
+$ tar zvxf dandelion-v6.0.2.tar.gz
 $ [configure web server to serve the public directory]
 {% endhighlight %}
 
@@ -84,7 +84,7 @@ $ mkdir -p /var/www
 $ cd /var/www
 $ git clone https://github.com/onesimus-systems/dandelion
 $ cd dandelion
-$ git checkout tags/v6.0.0
+$ git checkout tags/v6.0.2
 $ composer install --no-dev
 $ npm install && ./node_modules/.bin/gulp
 $ cp app/install/Nginx-sample-config.conf /etc/nginx/sites-available/default
@@ -123,7 +123,7 @@ $ mkdir -p /var/www
 $ cd /var/www
 $ git clone https://github.com/onesimus-systems/dandelion
 $ cd dandelion
-$ git checkout tags/v6.0.0
+$ git checkout tags/v6.0.2
 $ mysql -u [username] -p
 mysql> CREATE DATABASE [some name];
 mysql> exit;

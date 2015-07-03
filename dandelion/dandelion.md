@@ -11,7 +11,7 @@ License: [GPLv3](http://www.gnu.org/licenses/gpl-3.0.html)
 
 Source: [Github Repo](https://github.com/dragonrider23/dandelion)
 
-Current Stable: [v6.0.0](https://github.com/dragonrider23/dandelion/tree/master) [Download](https://github.com/onesimus-systems/dandelion/releases/tag/v6.0.0)
+Current Stable: [v6.0.2](https://github.com/dragonrider23/dandelion/tree/master) [Download](https://github.com/onesimus-systems/dandelion/releases/tag/v6.0.2)
 
 Current Unstable: [v6.1.0](https://github.com/dragonrider23/dandelion/tree/develop)
 

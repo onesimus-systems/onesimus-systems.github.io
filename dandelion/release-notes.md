@@ -7,7 +7,16 @@ permalink: /dandelion/release-notes/
 Dandelion - Release Notes
 -------------------------
 
-**v6.0.0** - **Unstable (develop branch)**
+**v6.1.0** - **Unstable (develop branch)**
+
+**v6.0.2** - **Current Stable (master branch)**
+
+- Fixed: Category rendering in IE
+- Fixed (in 6.0.1): Theme rendering in IE
+- Fixed: Session expiration
+- Fixed: Updating application version causes infinite redirect
+
+**v6.0.0**
 
 - New: Interface update
     * Dandelion has been updated with a fresh, new look. But don't worry, if you don't like the new look, just switch to the Legacy theme.
@@ -32,7 +41,7 @@ Dandelion - Release Notes
 - Improved: Replaced TinyMCE with jHtmlArea
 - Removed: The mail system has been removed because it didn't fit well with the purpose of Dandelion
 
-**v5.0.3** - **Current Stable (master branch)**
+**v5.0.3**
 
 - Bug fix: No spellcheck in TinyMCE editor
 
