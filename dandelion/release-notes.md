@@ -9,7 +9,11 @@ Dandelion - Release Notes
 
 **v6.1.0** - **Unstable (develop branch)**
 
-**v6.0.2** - **Current Stable (master branch)**
+**v6.0.3** - **Current Stable (master branch)**
+
+- Fixed: Non admin users couldn't edit logs
+
+**v6.0.2**
 
 - Fixed: Category rendering in IE
 - Fixed (in 6.0.1): Theme rendering in IE
