@@ -16,6 +16,8 @@ Index
 - [create](#create)
 - [edit](#edit)
 - [delete](#delete)
+- [enable](#enable)
+- [disable](#disable)
 - [getusers](#getusers)
 - [getuser](#getuser)
 
@@ -155,6 +157,80 @@ delete
 **Permissions Needed**:
 
 - Delete user
+
+[&#8657; Top](#index)
+
+* * * * *
+
+enable
+------
+
+**Endpoint**: `/api/users/enable`
+
+**Parameters**: `uid`
+
+| Parameter     | Type   | Default | Required |
+|---------------|--------|---------|----------|
+| `uid`         | int    |         | true     |
+
+**Description**: Enable user `uid`.
+
+**Example Return Data**:
+
+{% highlight json %}
+{
+	"data": "Success or error message"
+}
+{% endhighlight %}
+
+**Returned Values**:
+
+- data (string) - User displayable string if the save was successful or not
+
+**Permissions Needed**:
+
+- Edit user
+
+**Dandelion Version**
+
+- 6.1.0
+
+[&#8657; Top](#index)
+
+* * * * *
+
+disable
+------
+
+**Endpoint**: `/api/users/disable`
+
+**Parameters**: `uid`
+
+| Parameter     | Type   | Default | Required |
+|---------------|--------|---------|----------|
+| `uid`         | int    |         | true     |
+
+**Description**: Disable user `uid`.
+
+**Example Return Data**:
+
+{% highlight json %}
+{
+	"data": "Success or error message"
+}
+{% endhighlight %}
+
+**Returned Values**:
+
+- data (string) - User displayable string if the save was successful or not
+
+**Permissions Needed**:
+
+- Edit user
+
+**Dandelion Version**
+
+- 6.1.0
 
 [&#8657; Top](#index)
 
