@@ -12,9 +12,39 @@ Module name: keyanager
 Index
 -----
 
+- [get](#get)
 - [test](#test)
 - [revoke](#revoke)
 - [generate](#generate)
+
+get
+---
+
+**Endpoint**: `/api/key/get`
+
+**Parameters**: None
+
+**Description**: Gets the api key of the use associated with the request. Yes right now it's useless, but soon it won't be.
+
+**Example Return Data**:
+
+{% highlight json %}
+{
+	"data": "apikey123456"
+}
+{% endhighlight %}
+
+**Permissions Needed**:
+
+- None
+
+**Dandelion Version**
+
+- 6.1.0
+
+[&#8657; Top](#index)
+
+* * * * *
 
 test
 ----
@@ -23,7 +53,7 @@ test
 
 **Parameters**: None
 
-**Description**: Tests that the apikey is valid. This is a useful endpoint for extensions. An easy way to check the success is to check the `errorcode` field of the return object. A value of 0 means success, other values indicate failure means failure.
+**Description**: Tests that the apikey is valid. This is a useful endpoint for extensions. An easy way to check the success is to check the `errorcode` field of the return object. A value of 0 means success, other values indicate failure.
 
 **Example Return Data**:
 
@@ -52,7 +82,7 @@ revoke
 |-----------|--------|---------|----------|
 | `uid`     | int    | User ID | false    |
 
-**Description**: Revoke the API key for the user with `uid`. The default value for `uid` is the ID associated with the API key being used to make the request. Because of this, if `uid` is not defined, the key being used with no longer be valid.
+**Description**: Revoke the API key for the user with `uid`. The default value for `uid` is the ID associated with the API key being used to make the request. Because of this, if `uid` is not defined, the key being used will no longer be valid.
 
 **Example Return Data**:
 

@@ -1,9 +1,9 @@
 # Site settings
 title: Onesimus Systems
-email: onesimussystems@gmail.com
+email: lee@onesimussystems.com
 description: "Official blog and news source for Onesimus Systems."
 baseurl: ""
-url: "http://onesimussystems.com"
+url: "http://blog.onesimussystems.com"
 github_username:  onesimus-systems
 
 # Build settings
