@@ -56,7 +56,7 @@ API Enpoints
 
 [User Settings](/dandelion/api/user-settings)
 
-[Rights Management](/dandelion/api/rights)
+[Groups Management](/dandelion/api/groups)
 
 [User Management](/dandelion/api/users)
 
