@@ -7,7 +7,7 @@ permalink: /dandelion/api/key-mgnt/
 Dandelion - API Documentation - Key Management
 ----------------------------------------------
 
-Module name: keyanager
+Module name: keymanager
 
 Index
 -----

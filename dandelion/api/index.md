@@ -61,3 +61,5 @@ API Enpoints
 [User Management](/dandelion/api/users)
 
 [Key Management](/dandelion/api/key-mgnt)
+
+[Dandelion](/dandelion/api/dandelion)
