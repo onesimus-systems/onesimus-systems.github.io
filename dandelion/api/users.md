@@ -16,6 +16,8 @@ Index
 - [create](#create)
 - [edit](#edit)
 - [delete](#delete)
+- [enable](#enable)
+- [disable](#disable)
 - [getusers](#getusers)
 - [getuser](#getuser)
 
@@ -160,6 +162,80 @@ delete
 
 * * * * *
 
+enable
+------
+
+**Endpoint**: `/api/users/enable`
+
+**Parameters**: `uid`
+
+| Parameter     | Type   | Default | Required |
+|---------------|--------|---------|----------|
+| `uid`         | int    |         | true     |
+
+**Description**: Enable user `uid`.
+
+**Example Return Data**:
+
+{% highlight json %}
+{
+	"data": "Success or error message"
+}
+{% endhighlight %}
+
+**Returned Values**:
+
+- data (string) - User displayable string if the save was successful or not
+
+**Permissions Needed**:
+
+- Edit user
+
+**Dandelion Version**
+
+- 6.1.0
+
+[&#8657; Top](#index)
+
+* * * * *
+
+disable
+------
+
+**Endpoint**: `/api/users/disable`
+
+**Parameters**: `uid`
+
+| Parameter     | Type   | Default | Required |
+|---------------|--------|---------|----------|
+| `uid`         | int    |         | true     |
+
+**Description**: Disable user `uid`.
+
+**Example Return Data**:
+
+{% highlight json %}
+{
+	"data": "Success or error message"
+}
+{% endhighlight %}
+
+**Returned Values**:
+
+- data (string) - User displayable string if the save was successful or not
+
+**Permissions Needed**:
+
+- Edit user
+
+**Dandelion Version**
+
+- 6.1.0
+
+[&#8657; Top](#index)
+
+* * * * *
+
 getusers
 --------
 
@@ -181,7 +257,8 @@ getusers
 			"group_id": "1",
 			"created": "2014-01-1",
 			"theme": "Halloween",
-			"initial_login": "0"
+			"initial_login": "0",
+			"disabled": false
 		}
 	}
 }
@@ -198,10 +275,15 @@ getusers
 - created (string, date) - When the user was created
 - theme (string) - Preferred theme of user
 - initial_login (int) - Value to determine if user needs to reset password, also reserved for future use
+- disabled (bool) - Whether or not the user is disabled
 
 **Permissions Needed**:
 
 - Edit user
+
+**Notes**:
+
+- The `disabled` field was added in version 6.1.
 
 [&#8657; Top](#index)
 
@@ -216,9 +298,9 @@ getuser
 
 | Parameter     | Type   | Default | Required |
 |---------------|--------|---------|----------|
-| `uid`         | int    |         | true     |
+| `uid`         | int    |         | false (see note 2) |
 
-**Description**: Get information for user `uid`.
+**Description**: Get information for user `uid`. If `uid` is not given, the user of the API key will be assumed.
 
 **Example Return Data**:
 
@@ -232,7 +314,8 @@ getuser
 			"group_id": "1",
 			"created": "2014-01-1",
 			"theme": "Halloween",
-			"initial_login": "0"
+			"initial_login": "0",
+			"disabled": false
 		}
 	}
 }
@@ -249,10 +332,16 @@ getuser
 - created (string, date) - When the user was created
 - theme (string) - Preferred theme of user
 - initial_login (int) - Value to determine if user needs to reset password, also reserved for future use
+- disabled (bool) - Whether or not the user is disabled
 
 **Permissions Needed**:
 
 - Edit user
+
+**Notes**:
+
+1. The `disabled` field was added in version 6.1.
+2. The `uid` parameter was required up to version 6.1.
 
 [&#8657; Top](#index)
 

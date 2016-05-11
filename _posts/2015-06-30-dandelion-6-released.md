@@ -18,4 +18,4 @@ From this point forward, all major releases will have a code name along with the
 
 The time has come! Take back the time you've wasted keeping up with written logs! Download Dandelion "Phoenix" and taste the true power of logging.
 
-Download version 6 on [Github today](https://github.com/onesimus-systems/dandelion/releases/tag/v6.0.0)!
+Download version 6 on [Github today](https://github.com/onesimus-systems/dandelion/releases/tag/v6.0.4)!
