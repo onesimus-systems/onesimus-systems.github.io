@@ -11,13 +11,14 @@ License: [GPLv3](http://www.gnu.org/licenses/gpl-3.0.html)
 
 Source: [Github Repo](https://github.com/onesimus-systems/dandelion)
 
-Current Stable: [v6.0.3](https://github.com/onesimus-systems/dandelion/tree/master) [Download](https://github.com/onesimus-systems/dandelion/releases/tag/v6.0.3)
+Current Stable: [v6.1.0](https://github.com/onesimus-systems/dandelion/tree/master) [Download](https://github.com/onesimus-systems/dandelion/releases/tag/v6.1.0)
 
-Current Unstable: [v6.1.0](https://github.com/onesimus-systems/dandelion/tree/develop)
+Current Unstable: [develop](https://github.com/onesimus-systems/dandelion/tree/develop)
 
 Documentation:
 
 * [Installation](/dandelion/install)
+* [Upgrade](/dandelion/upgrade)
 * [Release Notes](/dandelion/release-notes)
 * [Search Docs](/dandelion/search)
 * [API Docs](/dandelion/api)

@@ -7,9 +7,22 @@ permalink: /dandelion/release-notes/
 Dandelion - Release Notes
 -------------------------
 
-**v6.1.0** - **Unstable (develop branch)**
+**v6.1.0**
 
-**v6.0.3** - **Current Stable (master branch)**
+- New: Disable users instead of deleting them.
+- New: Comments on logs
+- New: Development Vagrant environment
+- New: Permalink for individual logs
+- Fixed: Display issues on the dashboard
+- Improved: Replaced jHtmlArea with ckEditor
+- Improved: Creating and editing logs moved to separate page
+- Improved: Centralized session manager
+- Improved: Dev build script
+- Improved: Internal permissions handling
+- Improved: Validation of API request parameters
+- Misc. fixes and improvements
+
+**v6.0.3**
 
 - Fixed: Non admin users couldn't edit logs
 
