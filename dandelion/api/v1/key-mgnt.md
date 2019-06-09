@@ -1,7 +1,7 @@
 ---
 layout: page-no-title
 title: Dandelion - API - Key Management
-permalink: /dandelion/api/key-mgnt/
+permalink: /dandelion/api/v1/key-mgnt/
 ---
 
 Dandelion - API Documentation - Key Management
@@ -21,6 +21,8 @@ get
 ---
 
 **Endpoint**: `/api/key/get`
+
+**Method**: `POST`
 
 **Parameters**: None
 
@@ -51,6 +53,8 @@ test
 
 **Endpoint**: `/api/key/test`
 
+**Method**: `GET`
+
 **Parameters**: None
 
 **Description**: Tests that the apikey is valid. This is a useful endpoint for extensions. An easy way to check the success is to check the `errorcode` field of the return object. A value of 0 means success, other values indicate failure.
@@ -75,6 +79,8 @@ revoke
 ------
 
 **Endpoint**: `/api/key/revoke`
+
+**Method**: `POST`
 
 **Parameters**: `[uid]`
 
@@ -105,6 +111,8 @@ generate
 
 **Endpoint**: `/api/key/generate`
 
+**Method**: `POST`
+
 **Parameters**: None
 
 **Description**: Generate a new key for user who is associated with the apikey being used.
@@ -129,4 +137,4 @@ generate
 
 * * * * *
 
-[&#8656; API Documentation](/dandelion/api)
+[&#8656; API Documentation](/dandelion/api/v1)

@@ -1,7 +1,7 @@
 ---
 layout: page-no-title
 title: Dandelion - API - Dandelion
-permalink: /dandelion/api/dandelion/
+permalink: /dandelion/api/v1/dandelion/
 ---
 
 Dandelion - API Documentation - Dandelion
@@ -22,6 +22,8 @@ version
 -------
 
 **Endpoint**: `/api/dandelion/version`
+
+**Method**: `GET`
 
 **Parameters**: None
 
@@ -47,4 +49,4 @@ version
 
 * * * * *
 
-[&#8656; API Documentation](/dandelion/api)
+[&#8656; API Documentation](/dandelion/api/v1)

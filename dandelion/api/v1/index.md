@@ -1,7 +1,7 @@
 ---
 layout: page-no-title
 title: Dandelion - API Documentation
-permalink: /dandelion/api/
+permalink: /dandelion/api/v1/
 ---
 
 Dandelion - API Documentation
@@ -36,6 +36,10 @@ The `errorcode` field is an integer in the range [0,6] with the following meanin
 - 4 - Insufficient permissions
 - 5 - General error
 - 6 - Server error
+- 7 - Invalid Call
+- 8 - Module Not Found
+- 9 - Module Method Not Found
+- 10 - Cheesto Disabled
 
 The `status` field is a textual representation of the errorcode. For example, `API key is not valid`.
 
@@ -43,23 +47,25 @@ The `module` field is simply the module that was requested. Example, `logs`, `ch
 
 The `data` field is where the good stuff is. This can range from a string, to a JS object. You will have to refer to the documentation for each endpoint to know what kind of data to expect.
 
-The `requestTime` field is how long the API call took to complete. This time does not include the time for setup and teardown the request. Added in v6.1.0.
+The `request_time` field is how long the API call took to complete. This time does not include the time for setup and teardown the request. Added in v6.1.0.
 
 API Enpoints
 ------------
 
-[Logs](/dandelion/api/logs)
+[Categories](/dandelion/api/v1/categories)
 
-[Categories](/dandelion/api/categories)
+[Ĉeesto](/dandelion/api/v1/cheesto)
 
-[Ĉeesto](/dandelion/api/cheesto)
+[Comments](/dandelion/api/v1/comments)
 
-[User Settings](/dandelion/api/user-settings)
+[Dandelion](/dandelion/api/v1/dandelion)
 
-[Groups Management](/dandelion/api/groups)
+[Groups Management](/dandelion/api/v1/groups)
 
-[User Management](/dandelion/api/users)
+[Key Management](/dandelion/api/v1/key-mgnt)
 
-[Key Management](/dandelion/api/key-mgnt)
+[Logs](/dandelion/api/v1/logs)
 
-[Dandelion](/dandelion/api/dandelion)
+[User Management](/dandelion/api/v1/users)
+
+[User Settings](/dandelion/api/v1/user-settings)

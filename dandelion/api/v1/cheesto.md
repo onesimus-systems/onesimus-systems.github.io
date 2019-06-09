@@ -1,7 +1,7 @@
 ---
 layout: page-no-title
 title: Dandelion - API - Ĉeesto
-permalink: /dandelion/api/cheesto/
+permalink: /dandelion/api/v1/cheesto/
 ---
 
 Dandelion - API Documentation - Ĉeesto
@@ -21,6 +21,8 @@ read
 
 **Endpoint**: `/api/cheesto/read`
 
+**Method**: `GET`
+
 **Parameters**: `[uid]`
 
 | Parameter     | Type   | Default | Required |
@@ -34,7 +36,7 @@ read
 {% highlight json %}
 {
 	"data": {
-		"0": {
+		"statuses": [{
 			"id": "1",
 			"user_id": "1",
 			"fullname": "Admin",
@@ -43,7 +45,7 @@ read
 			"returntime": "00:00:00",
 			"modified": "2015-01-06 16:16:58",
 			"disabled": "0"
-		},
+		}],
 		"statusOptions": [
 			"Available",
 			"Away From Desk",
@@ -90,6 +92,8 @@ update
 
 **Endpoint**: `/api/cheesto/update`
 
+**Method**: `POST`
+
 **Parameters**: `[uid]`, `[message]`, `[status]`, `[returntime]`
 
 | Parameter     | Type   | Default | Required |
@@ -127,6 +131,8 @@ statustexts
 
 **Endpoint**: `/api/cheesto/statustexts`
 
+**Method**: `GET`
+
 **Parameters**: None
 
 **Description**: Get the available status texts as defined in the app configuration.
@@ -162,4 +168,4 @@ statustexts
 
 * * * * *
 
-[&#8656; API Documentation](/dandelion/api)
+[&#8656; API Documentation](/dandelion/api/v1)

@@ -1,7 +1,7 @@
 ---
 layout: page-no-title
 title: Dandelion - API - User Settings
-permalink: /dandelion/api/user-settings/
+permalink: /dandelion/api/v1/user-settings/
 ---
 
 Dandelion - API Documentation - User Settings
@@ -20,6 +20,8 @@ saveloglimit
 ------------
 
 **Endpoint**: `/api/usersettings/saveloglimit`
+
+**Method**: `POST`
 
 **Parameters**: `[limit]`
 
@@ -54,6 +56,8 @@ savetheme
 
 **Endpoint**: `/api/usersettings/savetheme`
 
+**Method**: `POST`
+
 **Parameters**: `[theme]`
 
 | Parameter | Type   | Default   | Required |
@@ -86,6 +90,8 @@ getthemelist
 ------------
 
 **Endpoint**: `/api/usersettings/getthemelist`
+
+**Method**: `GET`
 
 **Parameters**: None
 
@@ -133,4 +139,4 @@ getthemelist
 
 * * * * *
 
-[&#8656; API Documentation](/dandelion/api)
+[&#8656; API Documentation](/dandelion/api/v1)

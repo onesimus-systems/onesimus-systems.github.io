@@ -1,7 +1,7 @@
 ---
 layout: page-no-title
 title: Dandelion - API - Logs Module
-permalink: /dandelion/api/logs/
+permalink: /dandelion/api/v1/logs/
 ---
 
 Dandelion - API Documentation - Logs Module
@@ -22,6 +22,8 @@ read
 
 **Endpoint**: `/api/logs/read`
 
+**Method**: `GET`
+
 **Parameters**: `[offset]`, `[limit]`
 
 | Parameter | Type | Default | Required |
@@ -37,7 +39,7 @@ read
 {% highlight json %}
 {
 	"data": {
-		"0": {
+		"logs": [{
 			"id": "1",
 			"date_created": "2015-02-12",
 			"time_created": "12:24:53",
@@ -47,8 +49,8 @@ read
 			"category": "Logs",
 			"is_edited": "0",
 			"fullname": "Admin",
-			"canEdit": true
-		},
+			"can_edit": true
+		}],
 		"metadata": {
 			"limit": "25",
 			"logSize": "1000",
@@ -72,7 +74,7 @@ read
 - category (string) - String representation of the log's category
 - is_edited (bool) - Has the log been edited, 0 or 1
 - fullname (string) - Name of user who created log
-- canEdit (bool) - Does the user have permission to edit the log (for visual clues only, actual permissions are enforced server-side)
+- can_edit (bool) - Does the user have permission to edit the log (for visual clues only, actual permissions are enforced server-side)
 
 **Metadata** (not returned if `logid` is used)
 
@@ -93,6 +95,8 @@ create
 ------
 
 **Endpoint**: `/api/logs/create`
+
+**Method**: `POST`
 
 **Parameters**: `title`, `body`, `cat`
 
@@ -128,6 +132,8 @@ edit
 ----
 
 **Endpoint**: `/api/logs/edit`
+
+**Method**: `POST`
 
 **Parameters**: `logid`, `title`, `body`, `cat`
 
@@ -165,6 +171,8 @@ search
 
 **Endpoint**: `/api/logs/search`
 
+**Method**: `GET`
+
 **Parameters**: `query`, `[offset]`, `[limit]`
 
 | Parameter | Type   | Default | Required |
@@ -180,23 +188,25 @@ search
 {% highlight json %}
 {
 	"data": {
-		"0": {
-			"logid": "1",
-			"datec": "2015-02-12",
-			"timec": "12:24:53",
+		"logs": [{
+			"id": "1",
+			"date_created": "2015-02-12",
+			"time_created": "12:24:53",
 			"title": "Log title",
-			"entry": "Log content, contains HTML",
-			"usercreated": "1",
-			"cat": "Logs",
-			"edited": "0",
-			"realname": "Admin"
-		},
+			"body": "Log content, contains HTML",
+			"user_id": "1",
+			"category": "Logs",
+			"is_edited": "0",
+			"fullname": "Admin",
+			"can_edit": true
+		}],
 		"metadata": {
 			"limit": "25",
 			"logSize": "1000",
 			"offset": "0",
 			"resultCount": "25"
-		}
+		},
+		"queryData": {}
 	}
 }
 {% endhighlight %}
@@ -214,7 +224,7 @@ search
 - category (string) - String representation of the log's category
 - is_edited (bool) - Has the log been edited, 0 or 1
 - fullname (string) - Name of user who created log
-- canEdit (bool) - Does the user have permission to edit the log (for visual clues only, actual permissions are enforced server-side)
+- can_edit (bool) - Does the user have permission to edit the log (for visual clues only, actual permissions are enforced server-side)
 
 **Metadata**
 
@@ -222,6 +232,10 @@ search
 - logSize(int) - Number of total logs
 - offset (int) - Database ID offset used to get results
 - resultCount (int) - Number of logs returned
+
+**Query Data**
+
+A parsed representation of the query.
 
 **Permissions Needed**:
 
@@ -235,4 +249,4 @@ For the syntax of a search query, see the [search documentation](/dandelion/sear
 
 * * * * *
 
-[&#8656; API Documentation](/dandelion/api)
+[&#8656; API Documentation](/dandelion/api/v1)

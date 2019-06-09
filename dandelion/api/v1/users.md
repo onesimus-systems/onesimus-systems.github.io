@@ -1,7 +1,7 @@
 ---
 layout: page-no-title
 title: Dandelion - API - User Management
-permalink: /dandelion/api/users/
+permalink: /dandelion/api/v1/users/
 ---
 
 Dandelion - API Documentation - User Management
@@ -25,6 +25,8 @@ resetpassword
 -------------
 
 **Endpoint**: `/api/users/resetpassword`
+
+**Method**: `POST`
 
 **Parameters**: `[uid]`, `pw`
 
@@ -60,6 +62,8 @@ create
 
 **Endpoint**: `/api/users/create`
 
+**Method**: `POST`
+
 **Parameters**: `username`, `password`, `fullname`, `role`, `[cheesto]`
 
 | Parameter     | Type   | Default | Required |
@@ -70,7 +74,7 @@ create
 | `role`        | int    |         | true     |
 | `cheesto`     | string | true    | false    |
 
-**Description**: Create new user. The `cheesto` parameter determines if a Ĉeesto account will be created for this user. `role` is the ID of the group to which the user should belong. (See [Rights getlist function](/dandelion/api/rights/#getlist))
+**Description**: Create new user. The `cheesto` parameter determines if a Ĉeesto account will be created for this user. `role` is the ID of the group to which the user should belong. (See [Rights getlist function](/dandelion/api/v1/rights/#getlist))
 
 **Example Return Data**:
 
@@ -96,6 +100,8 @@ edit
 ----
 
 **Endpoint**: `/api/users/edit`
+
+**Method**: `POST`
 
 **Parameters**: `uid`, `[fullname]`, `[role]`, `[prompt]`, `[theme]`
 
@@ -134,6 +140,8 @@ delete
 
 **Endpoint**: `/api/users/delete`
 
+**Method**: `POST`
+
 **Parameters**: `uid`
 
 | Parameter     | Type   | Default | Required |
@@ -166,6 +174,8 @@ enable
 ------
 
 **Endpoint**: `/api/users/enable`
+
+**Method**: `POST`
 
 **Parameters**: `uid`
 
@@ -204,6 +214,8 @@ disable
 
 **Endpoint**: `/api/users/disable`
 
+**Method**: `POST`
+
 **Parameters**: `uid`
 
 | Parameter     | Type   | Default | Required |
@@ -240,6 +252,8 @@ getusers
 --------
 
 **Endpoint**: `/api/users/getusers`
+
+**Method**: `GET`
 
 **Parameters**: None
 
@@ -294,6 +308,8 @@ getuser
 
 **Endpoint**: `/api/users/getuser`
 
+**Method**: `GET`
+
 **Parameters**: `uid`
 
 | Parameter     | Type   | Default | Required |
@@ -347,4 +363,4 @@ getuser
 
 * * * * *
 
-[&#8656; API Documentation](/dandelion/api)
+[&#8656; API Documentation](/dandelion/api/v1)

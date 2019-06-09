@@ -1,7 +1,7 @@
 ---
 layout: page-no-title
 title: Dandelion - API - Categories
-permalink: /dandelion/api/categories/
+permalink: /dandelion/api/v1/categories/
 ---
 
 Dandelion - API Documentation - Categories
@@ -20,6 +20,8 @@ create
 ------
 
 **Endpoint**: `/api/categories/create`
+
+**Method**: `POST`
 
 **Parameters**: `pid`, `description`
 
@@ -55,6 +57,8 @@ edit
 
 **Endpoint**: `/api/categories/edit`
 
+**Method**: `POST`
+
 **Parameters**: `cid`, `description`
 
 | Parameter     | Type   | Default | Required |
@@ -89,6 +93,8 @@ delete
 
 **Endpoint**: `/api/categories/delete`
 
+**Method**: `POST`
+
 **Parameters**: `cid`
 
 | Parameter     | Type   | Default | Required |
@@ -117,4 +123,4 @@ delete
 
 * * * * *
 
-[&#8656; API Documentation](/dandelion/api)
+[&#8656; API Documentation](/dandelion/api/v1)

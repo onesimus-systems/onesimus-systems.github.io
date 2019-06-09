@@ -21,7 +21,7 @@ Documentation:
 * [Upgrade](/dandelion/upgrade)
 * [Release Notes](/dandelion/release-notes)
 * [Search Docs](/dandelion/search)
-* [API Docs](/dandelion/api)
+* [API v1 Docs](/dandelion/api/v1)
 * [Theme Docs](/dandelion/theme-docs)
 
 Contributing

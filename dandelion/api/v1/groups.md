@@ -1,7 +1,7 @@
 ---
 layout: page-no-title
 title: Dandelion - API - Groups
-permalink: /dandelion/api/groups/
+permalink: /dandelion/api/v1/groups/
 ---
 
 Dandelion - API Documentation - Rights
@@ -23,6 +23,8 @@ getlist
 -------
 
 **Endpoint**: `/api/groups/getlist`
+
+**Method**: `GET`
 
 **Parameters**: None
 
@@ -66,6 +68,8 @@ getgroup
 --------
 
 **Endpoint**: `/api/groups/getgroup`
+
+**Method**: `GET`
 
 **Parameters**: `groupid`
 
@@ -116,6 +120,8 @@ create
 
 **Endpoint**: `/api/groups/create`
 
+**Method**: `POST`
+
 **Parameters**: `name`, `rights`
 
 | Parameter     | Type   | Default | Required |
@@ -149,6 +155,8 @@ edit
 ----
 
 **Endpoint**: `/api/groups/edit`
+
+**Method**: `POST`
 
 **Parameters**: `groupid`, `rights`
 
@@ -184,6 +192,8 @@ delete
 
 **Endpoint**: `/api/groups/delete`
 
+**Method**: `POST`
+
 **Parameters**: `groupid`
 
 | Parameter     | Type   | Default | Required |
@@ -216,6 +226,8 @@ getuserrights
 -------------
 
 **Endpoint**: `/api/groups/getuserrights`
+
+**Method**: `GET`
 
 **Parameters**: None
 
@@ -265,4 +277,4 @@ Full permission list:
 
 * * * * *
 
-[&#8656; API Documentation](/dandelion/api)
+[&#8656; API Documentation](/dandelion/api/v1)
